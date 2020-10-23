@@ -1,0 +1,136 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+<div class="parallax-content baner-content" id="home">
+    <div class="container">
+        <div class="first-content">
+            <h1> Staff</h1>
+            <span><em>PERER (PVT)</em></span>
+            <div class="primary-button">
+                <a href="#services">ABOUT US</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <div class="row">
+     <div class="col s1">
+         <div class="card">
+             <div class="card-content white-text">
+                 <div class="row">
+                     <div class="col s3">
+                         <form #staffForm="ngForm"  (ngSubmit)="onSubmit(staffForm)" novalidate>
+                             <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="staffService.selectedStaff._id">
+                             <div class="row">
+                                 <div class="input-field col s6">
+                                     <input type="text" name="name" #name="ngModel" [(ngModel)]="staffService.selectedStaff.name" placeholder="Eg : Dalin Aranga"required>
+                                     <label>Name : 
+                                         <label class="red-text">*</label>
+                                     </label>
+                                 </div>
+                             </div>
+                             <div class="row">
+                                <div class="input-field col s6">
+                                    <input type="text" name="status" #name="ngModel" [(ngModel)]="staffService.selectedStaff.status" placeholder="Eg : Manager">
+
+                                    <label>Status : </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input type="text" name="age" #name="ngModel" [(ngModel)]="staffService.selectedStaff.age" placeholder="Eg : 24">
+                                    <label>Age : </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input type="text" name="workArea" #name="ngModel" [(ngModel)]="staffService.selectedStaff.workArea" placeholder=" Eg : HR">
+                                    <label>Work Place :  </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input type="text" name="address" #name="ngModel" [(ngModel)]="staffService.selectedStaff.address" placeholder="Eg : Tricomalee">
+                                    <label>Address : </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input type="text" name="joinDate" #name="ngModel" [(ngModel)]="staffService.selectedStaff.joinDate" placeholder=" Eg : 2020/1022">
+                                    <label>Join Date : </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <button class="btn btn-custom right" type="button" (click)="resetForm(staffForm)">Reset</button>
+                                    <button class="btn btn-custom right" type="submit" [disabled]="!staffForm.valid">Submit</button>
+                                </div>
+                            </div>
+                         </form>
+                     </div>
+                     <div class="col s9">
+                        <table class="responsive-table highlight">
+                            <thead>
+                              <tr>
+                                <th>Name</th>
+                                <th>Status</th>
+                                <th>Age</th>
+                                <th>Work Place</th>
+                                <th>Address </th>
+                                <th>Age</th>
+                                <th>Join Date</th>
+                                <th></th>
+                              </tr>
+                            </thead>
+                            <tr *ngFor="let staffemp of staffService.staff">
+                              <td>{{staffemp.name}}</td>
+                              <td>{{staffemp.status}}</td>
+                              <td>{{staffemp.age}}</td>
+                              <td>{{staffemp.workArea}}</td>
+                              <td>{{staffemp.address}}</td>
+                              <td>{{staffemp.joinDate}}</td>
+                              <td>
+                                  <a class="action-btn" (click)="onEdit(staffemp)">
+                                    <i class="material-icons">edit</i>
+                                  </a>
+                                  <a class="action-btn" (click)="onDelete(staffemp._id,staffForm)">
+                                    <i class="material-icons">delete</i>
+                                  </a>
+                                </td>
+                            </tr>
+                          </table>
+                         
+                    </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+
+ </div>
+ <footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="primary-button">
+                    <a href="#home">Persional Link Dalin</a>
+                </div>
+                <ul>
+                    <li><a href="https://www.facebook.com/Python-FutureMind-104388011418842/insights/?section=navLikes"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/DalinAranga"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/dalin-aranga-a669a61a2/?originalSubdomain=lk"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://accounts.google.com/b/0/AddMailService"><i class="fa fa-google"></i></a></li>
+                    <li><a href="https://stackoverflow.com/users/email/settings/14046981"><i class="fa fa-stack-overflow"></i></a></li>
+                    <li><a href="https://github.com/dalin-aranga"><i class="fa fa-github"></i></a></li>
+                    
+                    
+                </ul>
+                <p>Web Project &copy; 2020 Company Name 
+        
+                - Create: <a rel="nofollow noopener" href="https://templatemo.com"><em>Perera M.D.A</em></a></p>
+            </div>
+        </div>
+    </div>
+</footer>

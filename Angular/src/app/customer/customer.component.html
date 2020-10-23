@@ -1,0 +1,139 @@
+ <!-- Compiled and minified CSS -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+ <!-- Compiled and minified JavaScript -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        
+ <div class="parallax-content baner-content" id="home">
+  <div class="container">
+      <div class="first-content">
+          <h1> CUSTOMERS</h1>
+          <span><em>PERER (PVT)</em></span>
+          <div class="primary-button">
+              <a href="#services">ABOUT US</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+<div class="row">
+  <div class="col s1">
+      <div class="card">
+          <div class="card-content white-text">
+              <div class="row">
+                  <div class="col s3">
+                      <form #customerForm="ngForm"  (ngSubmit)="onSubmit(customerForm)" novalidate>
+                          <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="customerService.selectedCustomer._id">
+                          <div class="row">
+                              <div class="input-field col s6">
+                                  <input type="text" name="name" #name="ngModel" [(ngModel)]="customerService.selectedCustomer.name" placeholder="Eg : Dalin Aranga"required>
+                                  <label>Name : 
+                                      <label class="red-text">*</label>
+                                  </label>
+                              </div>
+                          </div>
+                          <div class="row">
+                             <div class="input-field col s6">
+                                 <input type="text" name="orderName" #name="ngModel" [(ngModel)]="customerService.selectedCustomer.orderName" placeholder="Eg : Chair">
+
+                                 <label>Order Name : </label>
+                             </div>
+                         </div>
+                         <div class="row">
+                             <div class="input-field col s6">
+                                 <input type="text" name="distric" #name="ngModel" [(ngModel)]="customerService.selectedCustomer.distric" placeholder="EG: Branch">
+                                 <label>Distic : </label>
+                             </div>
+                         </div>
+                         <div class="row">
+                             <div class="input-field col s6">
+                                 <input type="text" name="phoneNumber" #name="ngModel" [(ngModel)]="customerService.selectedCustomer.phoneNumber" placeholder=" Eg : 0712099943">
+                                 <label>Phone Number :  </label>
+                             </div>
+                         </div>
+                         <div class="row">
+                             <div class="input-field col s6">
+                                 <input type="text" name="address" #name="ngModel" [(ngModel)]="customerService.selectedCustomer.address" placeholder="Eg : Tricomalee">
+                                 <label>Address : </label>
+                             </div>
+                         </div>
+                         <div class="row">
+                             <div class="input-field col s6">
+                                 <input type="text" name="totalPrice" #name="ngModel" [(ngModel)]="customerService.selectedCustomer.totalPrice" placeholder=" Eg : 2000">
+                                 <label>Total Price : </label>
+                             </div>
+                         </div>
+                         <div class="row">
+                             <div class="input-field col s6">
+                                 <button class="btn btn-custom right" type="button" (click)="resetForm(customerForm)">Reset</button>
+                                 <button class="btn btn-custom right" type="submit" [disabled]="!customerForm.valid">Submit</button>
+                             </div>
+                         </div>
+                      </form>
+                  </div>
+                  <div class="col s9">
+                     <table class="responsive-table highlight">
+                         <thead>
+                           <tr>
+                             <th>Name</th>
+                             <th>Order Name </th>
+                             <th>Distic</th>
+                             <th>Phone Number</th>
+                             <th>Address </th>
+                             <th>Total Price</th>
+                             <th></th>
+                           </tr>
+                         </thead>
+                         <tr *ngFor="let customeremp of customerService.customer">
+                           <td>{{customeremp.name}}</td>
+                           <td>{{customeremp.orderName}}</td>
+                           <td>{{customeremp.distric}}</td>
+                           <td>{{customeremp.phoneNumber}}</td>
+                           <td>{{customeremp.address}}</td>
+                           <td>{{customeremp.totalPrice}}</td>
+                           <td>
+                               <a class="action-btn" (click)="onEdit(customeremp)">
+                                 <i class="material-icons">edit</i>
+                               </a>
+                               <a class="action-btn" (click)="onDelete(customeremp._id,customerForm)">
+                                 <i class="material-icons">delete</i>
+                               </a>
+                             </td>
+                         </tr>
+                       </table>
+                      
+                 </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<footer>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="primary-button">
+                <a href="#home">Persional Link Dalin</a>
+            </div>
+            <ul>
+                <li><a href="https://www.facebook.com/Python-FutureMind-104388011418842/insights/?section=navLikes"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/DalinAranga"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/dalin-aranga-a669a61a2/?originalSubdomain=lk"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="https://accounts.google.com/b/0/AddMailService"><i class="fa fa-google"></i></a></li>
+                <li><a href="https://stackoverflow.com/users/email/settings/14046981"><i class="fa fa-stack-overflow"></i></a></li>
+                <li><a href="https://github.com/dalin-aranga"><i class="fa fa-github"></i></a></li>
+                
+                
+            </ul>
+            <p>Web Project &copy; 2020 Company Name 
+    
+            - Create: <a rel="nofollow noopener" href="https://templatemo.com"><em>Perera M.D.A</em></a></p>
+        </div>
+    </div>
+</div>
+</footer>
+ 
+        
