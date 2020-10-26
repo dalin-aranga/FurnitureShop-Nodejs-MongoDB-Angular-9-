@@ -15,183 +15,112 @@
       </div>
   </div>
 </div>
+                
 
-<form #furnitureForm="ngForm"  (ngSubmit)="onSubmit(furnitureForm)" novalidate></form>
 <div class="row">
-  <div class="card" style="width: 18rem;">
-          <img src="../../assets/Images/item2.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <tr *ngFor="let furnitureemp of furnitureService.customer">
-              <h6 class="card-title">Item Name: {{furnitureemp.name}}</h6>
-              <h4 class="card-title">Price : {{furnitureemp.price}}</h4>
-              <h4 class="card-title">Color : {{furnitureemp.color}}</h4>
-              <h4 class="card-title"> Availble Amount : {{furnitureemp.avalibleCount}}</h4>
-              <h4 class="card-title"> Discount : {{furnitureemp.discount}}</h4>
-
-              <p class="card-text">Description : Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <button style="margin: 20px;" class="btn btn-custom right" type="button" (click)="resetForm(furnitureForm)">Delete</button>
-              <button style="margin: 20px;" class="btn btn-custom right" type="button" (click)="resetForm(furnitureForm)">Edit</button>
-            </tr>
-          </div>
-      </div> 
-      
-      <div class="card" style="width: 18rem;">
-          <img src="../../assets/Images/item2.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <tr *ngFor="let furnitureemp of furnitureService.customer">
-              <h6 class="card-title">Item Name: {{furnitureemp.name}}</h6>
-              <h4 class="card-title">Price : {{furnitureemp.price}}</h4>
-              <h4 class="card-title">Color : {{furnitureemp.color}}</h4>
-              <h4 class="card-title"> Availble Amount : {{furnitureemp.avalibleCount}}</h4>
-              <h4 class="card-title"> Discount : {{furnitureemp.discount}}</h4>
-
-              <p class="card-text">Description : Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <button style="margin: 20px;" class="btn btn-custom right" type="button" (click)="resetForm(furnitureForm)">Delete</button>
-              <button style="margin: 20px;" class="btn btn-custom right" type="button" (click)="resetForm(furnitureForm)">Edit</button>
-            </tr>
-          </div>
-      </div> 
-      <div class="card" style="width: 18rem;">
-          <img src="../../assets/Images/item2.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <tr *ngFor="let furnitureemp of furnitureService.customer">
-              <h6 class="card-title">Item Name: {{furnitureemp.name}}</h6>
-              <h4 class="card-title">Price : {{furnitureemp.price}}</h4>
-              <h4 class="card-title">Color : {{furnitureemp.color}}</h4>
-              <h4 class="card-title"> Availble Amount : {{furnitureemp.avalibleCount}}</h4>
-              <h4 class="card-title"> Discount : {{furnitureemp.discount}}</h4>
-
-              <p class="card-text">Description : Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <button style="margin: 20px;" class="btn btn-custom right" type="button" (click)="resetForm(furnitureForm)">Delete</button>
-              <button style="margin: 20px;" class="btn btn-custom right" type="button" (click)="resetForm(furnitureForm)">Edit</button>
-            </tr>
-          </div>
-      </div> 
-      <div class="card" style="width: 18rem;">
-          <img src="../../assets/Images/item2.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <tr *ngFor="let furnitureemp of furnitureService.customer">
-              <h6 class="card-title">Item Name: {{furnitureemp.name}}</h6>
-              <h4 class="card-title">Price : {{furnitureemp.price}}</h4>
-              <h4 class="card-title">Color : {{furnitureemp.color}}</h4>
-              <h4 class="card-title"> Availble Amount : {{furnitureemp.avalibleCount}}</h4>
-              <h4 class="card-title"> Discount : {{furnitureemp.discount}}</h4>
-
-              <p class="card-text">Description : {{furnitureemp.description}}</p>
-              <button style="margin: 20px;" class="btn btn-custom right" type="button" (click)="resetForm(furnitureForm)">Delete</button>
-              <button style="margin: 20px;" class="btn btn-custom right" type="button" (click)="resetForm(furnitureForm)">Edit</button>
-            </tr>
-          </div>
-      </div> 
-      <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 18rem; " *ngFor="let furnitureemp of furnitureService.furniture">
         <img src="../../assets/Images/item2.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <tr *ngFor="let furnitureemp of furnitureService.customer">
+        <div class="card-body" >
+        
             <h6 class="card-title">Item Name: {{furnitureemp.name}}</h6>
             <h4 class="card-title">Price : {{furnitureemp.price}}</h4>
             <h4 class="card-title">Color : {{furnitureemp.color}}</h4>
             <h4 class="card-title"> Availble Amount : {{furnitureemp.avalibleCount}}</h4>
             <h4 class="card-title"> Discount : {{furnitureemp.discount}}</h4>
 
-            <p class="card-text">Description : {{furnitureemp.description}}.</p>
-            <button style="margin: 20px;" class="btn btn-custom right" type="button" (click)="resetForm(furnitureForm)">Delete</button>
-            <button style="margin: 20px;" class="btn btn-custom right" type="button" (click)="resetForm(furnitureForm)">Edit</button>
-          </tr>
-        </div>
-    </div> 
-    <div class="card" style="width: 18rem;">
-      <img src="../../assets/Images/item2.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <tr *ngFor="let furnitureemp of furnitureService.customer">
-          <h6 class="card-title">Item Name: {{furnitureemp.name}}</h6>
-          <h4 class="card-title">Price : {{furnitureemp.price}}</h4>
-          <h4 class="card-title">Color : {{furnitureemp.color}}</h4>
-          <h4 class="card-title"> Availble Amount : {{furnitureemp.avalibleCount}}</h4>
-          <h4 class="card-title"> Discount : {{furnitureemp.discount}}</h4>
-
-          <p class="card-text">Description : {{furnitureemp.description}}</p>
-          <button style="margin: 20px;" class="btn btn-custom right" type="button" (click)="resetForm(furnitureForm)">Delete</button>
-          <button style="margin: 20px;" class="btn btn-custom right" type="button" (click)="resetForm(furnitureForm)">Edit</button>
-        </tr>
-      </div>
-    </div> 
-    <div class="row">
-      <form class="col s12">
-        <div class="row">
-          <div class="input-field col s6">
-            <input id="last_name" type="text" #name="ngModel" [(ngModel)]="furnitureService.selectedFurniture.name" class="validate">
-            <label for="last_name">Item Name : </label>
-          </div>
-          <div class="input-field col s6">
-            <input id="last_name" type="text" class="validate">
-            <label for="last_name">Price : </label>
-          </div>
-        </div>
+            <p class="card-text">Description : Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <button style="margin: 20px;" class="btn btn-custom right" type="button" (click)="onDelete(furnitureemp._id,furnitureForm)">Delete</button>
+            <button style="margin: 20px;" class="btn btn-custom right" type="button" (click)="onEdit(furnitureemp)">Edit</button>
         
-        <div class="row">
-          <div class="input-field col s6">
-            <input id="last_name" type="text" #name="ngModel" [(ngModel)]="furnitureService.selectedFurniture.color" class="validate">
-            <label for="last_name">Color : </label>
-          </div>
         </div>
-        <div class="row">
-          <div class="input-field col s6">
-            <input id="last_name" type="text" #name="ngModel" [(ngModel)]="furnitureService.selectedFurniture.discount" class="validate">
-            <label for="last_name">Discount : </label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s6">
-            <input id="last_name" type="text" #name="ngModel" [(ngModel)]="furnitureService.selectedFurniture.avalibleCount" class="validate">
-            <label for="last_name">Availble Amount :</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s6">
-            <input id="last_name" type="text" #name="ngModel" [(ngModel)]="furnitureService.selectedFurniture.discription" class="validate">
-            <label for="last_name">Discription</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="row">
-            <div class="input-field col s6">
-                <button style="margin: 50px;" class="btn btn-custom right" type="button" (click)="resetForm(staffForm)">Reset</button>
-                <button style="margin: 50px;" class="btn btn-custom right" type="submit" [disabled]="!staffForm.valid">Submit</button>
-                
-            </div>
-        </div>
-      </form>   
-   </div>
-      
-  </div>
-  
-          
+    </div>
+    
 </div>
-</form>
+<form #furnitureForm="ngForm" (ngSubmit) = "onSubmit(furnitureForm)" novalidate>
+    <div class="col s6">
+        <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="furnitureService.selectedFurniture._id">
+            <div class="row">
+                <div class="input-field col s6">
+                <input style="font-weight: bold; margin-top: 10px;"  name="name" #name="ngModel" [(ngModel)]="furnitureService.selectedFurniture.name"type="text" placeholder="Eg : White Chair">
+                <label style="font-weight: bold; font-size: 2rem;" class="active" for="first_name2">Item Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                <input style="font-weight: bold; margin-top: 10px;" name="price"    #name="ngModel" [(ngModel)]="furnitureService.selectedFurniture.price" type="text"  placeholder="Eg : 13500">
+                <label style="font-weight: bold; font-size: 2rem;" class="active" for="first_name2">Item Price</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                <input style="font-weight: bold; margin-top: 10px;" name="color"  #name="ngModel" [(ngModel)]="furnitureService.selectedFurniture.color" type="text"  placeholder="Eg : Red">
+                <label style="font-weight: bold; font-size: 2rem;" class="active" for="first_name2">Color</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                <input style="font-weight: bold; margin-top: 10px;" name="avalibleCount"   #name="ngModel" [(ngModel)]="furnitureService.selectedFurniture.avalibleCount" type="text"  placeholder="Eg : 25">
+                <label style="font-weight: bold; font-size: 2rem;" class="active" for="first_name2">Availble Amount</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                <input style="font-weight: bold; margin-top: 10px;"  name="description"    #name="ngModel" [(ngModel)]="furnitureService.selectedFurniture.description" type="text" placeholder="Eg : Best Item">
+                <label style="font-weight: bold; font-size: 2rem;" class="active" for="first_name2">Discription</label>
+                </div>
+            </div>
+    
+
+        
+            <div class="file-field input-field">
+            <div class="btn">
+                <span> Upload Image</span>
+                <input type="file" multiple>
+            </div>
+            <div class="file-path-wrapper">
+                <input class="file-path validate" type="text" placeholder="Upload one or more files">
+            </div>
+            </div>
+       
+ 
+        <div class="row">
+            <button class="btn btn-custom " style="margin-left: 400px; margin-top: 30px; margin-bottom: 30px;font-size:x-large; border: 30px; width: 200px; " (click)="resetForm(furnitureForm)" type="button" >Reset</button>
+            <button class="btn btn-custom " style="margin-left: 400px; margin-top: 30px; margin-bottom: 30px;font-size:x-large; border: 30px; width: 200px; "(click)="onSubmit(furnitureForm)" type="submit" [disabled]="!furnitureForm.valid" >Submit</button> 
+        </div>
+    </div>
+</form> 
+
+
+
+
+
+
+
+
 
 
 <footer>
-  <div class="container">
-      <div class="row">
-          <div class="col-md-12">
-              <div class="primary-button">
-                  <a href="#home">Persional Link Dalin</a>
-              </div>
-              <ul>
-                  <li><a href="https://www.facebook.com/Python-FutureMind-104388011418842/insights/?section=navLikes"><i class="fa fa-facebook"></i></a></li>
-                  <li><a href="https://twitter.com/DalinAranga"><i class="fa fa-twitter"></i></a></li>
-                  <li><a href="https://www.linkedin.com/in/dalin-aranga-a669a61a2/?originalSubdomain=lk"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a href="https://accounts.google.com/b/0/AddMailService"><i class="fa fa-google"></i></a></li>
-                  <li><a href="https://stackoverflow.com/users/email/settings/14046981"><i class="fa fa-stack-overflow"></i></a></li>
-                  <li><a href="https://github.com/dalin-aranga"><i class="fa fa-github"></i></a></li>
-                  
-                  
-              </ul>
-              <p>Web Project &copy; 2020 Company Name 
-      
-              - Create: <a rel="nofollow noopener" href="https://templatemo.com"><em>Perera M.D.A</em></a></p>
-          </div>
-      </div>
-  </div>
-</footer>
-
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="primary-button">
+                    <a href="#home">Persional Link Dalin</a>
+                </div>
+                <ul>
+                    <li><a href="https://www.facebook.com/Python-FutureMind-104388011418842/insights/?section=navLikes"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/DalinAranga"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/dalin-aranga-a669a61a2/?originalSubdomain=lk"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://accounts.google.com/b/0/AddMailService"><i class="fa fa-google"></i></a></li>
+                    <li><a href="https://stackoverflow.com/users/email/settings/14046981"><i class="fa fa-stack-overflow"></i></a></li>
+                    <li><a href="https://github.com/dalin-aranga"><i class="fa fa-github"></i></a></li>
+                    
+                    
+                </ul>
+                <p>Web Project &copy; 2020 Company Name 
+        
+                - Create: <a rel="nofollow noopener" href="https://templatemo.com"><em>Perera M.D.A</em></a></p>
+            </div>
+        </div>
+    </div>
+  </footer>
+          
